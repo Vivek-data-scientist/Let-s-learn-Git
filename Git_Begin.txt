@@ -1,2 +1,66 @@
 I am learning Git
 This is my first Git file 😀
+
+What is Git?
+=============
+Git is a kind of version control system, wherein it is one of the tool to save the history of your files.
+
+Starting with Git:
+==================
+1. Download Git from https://git-scm.com/downloads
+   depending on your system requirements, i.e, for Windows, Mac or Linux/Unix machines
+2. Install Git in your system
+3. Launch Git bash which is also called as Git command line
+4. Check for git version to know whether git installation was successful or not by running below command
+
+     git --version
+  
+   If it does not show any version, then there is some error in installation, you need to rectify that.
+
+5. Configure your username and email by running below commands
+
+     git config -global user.name "[name]"
+     git config -global user.email "[email]"
+
+   Please note provide your name and email inside []
+
+6. Make a new directory in git bash command prompt using below command
+     
+     mkdir [directory_name]
+
+   Please note provide own directory name inside []
+
+7. Change to the new directory
+
+     cd [directory_name]/
+
+   Please provide the new directory name which you created in step 5
+
+8. Create a file within this new directory using below command
+     
+     touch [filename].txt
+
+   Please provide a file name suitable for you inside []. 
+   Also note that you can create any file format, for simple understanding i have taken text file.
+
+9. To verify file has been created, run below command
+     
+     ls
+
+   It lists down all the files present in current working directory.
+
+10. Now you can add content into this file as per your requirement directly by opening the file from file location
+    (Or)
+    By running below command and following subsequent steps content can be added using Git bash
+
+      vim [filename].txt
+      Press "I" or hit "insert" on keyboard
+      Type in your content
+      After you have completed adding the content, save the file, press Esc and then press :wq
+
+11. To verify the contents of your file, navigate to the file in your folder path in local and open it.
+    The file content will be visible.
+
+12. Once file contents are changed, please head on next part of Git Learning series which is "Using Git for creating repos, stage the files and commit the files".
+
+Happy Learning!!
