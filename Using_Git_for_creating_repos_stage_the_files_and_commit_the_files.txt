@@ -1,0 +1,78 @@
+1. Git uses the concept of repository to track your projects, so for that below command is run
+     
+     git init
+
+   This command will initialise the current folder as empty repository and in the command line
+   you can see (master) beside the current folder name
+
+2. To verify type ls, and you would see nothing under this repo, since it's empty.
+3. Type git status
+   Clearly it would show the file that you created in above section under untracked section.
+   Git always keeps the files in untracked section, and when you want to commit to a branch you need to track the file and then commit it.
+
+4. To track the untracked file(s), run below command
+   
+     git add [filename]
+
+   Now when you run git status under "Changes to be committed" section you will see these tracked files.
+   This is also known as Staging. Staging area is basically where you hold the changes beffore committing.
+
+5. Commit the files from staging using below command
+     
+     git commit -m "message for commit"
+
+   It's ideal to have a message for each commit done, to keep track on what changes that particular commit has.
+   Remember, always files need to be in staging for commit to be successful.
+
+6. To check for what all commits have taken place, and who has performed them then check logs by running command below
+     
+     git log
+
+   It shows the author, commit date along with commit message and commit hashcode information.
+
+7. Now perform changes in your file and create new files in the repo folder in local.
+8. When you perform changes to the file that was committed, after running git status, you will see this file under
+   "Changes to be committed" section, with modified tag. You have to git commit to commit the file
+   For newly created files, they will be under "Untracked files" section, you need to bring it to tracking
+   i.e, to Staging area using "git add" command and then perform git commit
+
+9. Please note that to clear the terminal type "clear" in Windows and (command+k) in Mac
+
+10. To checkout a particular change you can run below command
+     
+        git checkout <commit hashcode/branch name>
+
+    This will take you back to that particular commit changes and discard all subsequent commits.
+    You can anyways come to latest commit by running below command.
+     
+        git checkout master
+
+11. Branching can also be done through git where we can have multiple branches for the master branch.
+
+        git branch <branch name>
+
+    When you run "git branch" it will show both new branch  and master branch.
+    You can switch from master to new branch by running below command
+ 
+        git checkout <branch name>
+
+    Shortcut command for creating new branch and switching to it is below:
+        
+        git checkout -b <branch name>
+
+12. In this way several branches can be created and files committed in these branches do not know anything about each other
+
+13. Merging of two branches will bring all the files present in these branches at one place
+       
+        git merge <branch name>
+
+14. Hence, once all features get developed in their respective branches, all branches should be merged with master branch and 
+    only master branch should go to production.
+
+15. Now you can also configure git to ignore some files or you can say that you do not want these files to be tracked.
+    Create .gitignore file either in your local or by using command "touch .gitignore"
+    Then add the file names inside .gitignore file and git will not track those files, even you can add .gitignore file itself.
+
+16. Once you have completed till step 15, head on to "Using Git to push code/file contents to GitHub" on this Git Learning Series.
+
+Happy Learning!!
