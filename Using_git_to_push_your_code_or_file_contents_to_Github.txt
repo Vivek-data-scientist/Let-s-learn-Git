@@ -1,0 +1,53 @@
+1. At first create your account on Github and set up your profile, if you don't have one.
+2. Go to "Your Profile" and click on Repositories
+3. Now click on New
+4. In Create Repository web page, provide your own repository name and description
+5. Click on Create Repository, leaving other fields as default.
+   You can explore other fields as well, like if you want you can add a README file, stating the purpose of the code/text file
+
+6. Upon clicking on Create Repository, a setup screen opens providing 3 options:
+       i) create repository on the command line
+       ii) or push an existing repository from the command line
+       iii) or import code from another repository
+
+7. You can proceed with option (ii) for now as you have followed above sections
+8. Copy paste the commands provided under (ii) in git bash terminal and execute one by one
+9. All the commits for that branch will be visible in Github
+
+10. You can always go to your local and do changes to your files, then perform git add and git commit in terminal for changes 
+    to happen on the desired branch. 
+    Now do git push to reflect the same changes in Github repo
+
+11. Suppose you want also push other branch apart from master, then follow below steps:
+        i) checkout that branch in git bash terminal
+               git checkout <branch name>
+        ii) perform git push
+               git push -u origin <branch name>
+    Reload in Github to see the changes
+
+12. Also there is a feature to add multiple collaborators in a project where more than one developers are working
+13. Go to Settings -> Manage access -> Invite a collaborator using username/email/full name
+14. After they accept your invite then they also get access to that repo. They can clone it, make changes in local and push those changes.
+
+15. You can contribute to open source repos as well, by forking them (follow below steps):
+        i)   Go to that repo and click on fork
+        ii)  the copy of same repo will get created on your own git hub
+             check the heading which shows "Your name/Repo name" forked from "Repo creator name/repo name"
+        iii) Any changes made to this repo now is local to you, there will be no changes in main repo
+        iv)  Now git clone the repo url in the git bash terminal
+        v)   Edit the contents of files present in this repo and save
+        vi)  Then create separate branch and add your updated files, using git add, then perform git commit and git push
+        vii) Now in this forked repo changes will reflect, but master repo still does not know about these changes
+        viii) For changes to get reflected on master repo, you need to create a pull request by following steps below:
+                   - Click on Contribute
+                   - Click on Open Pull request
+                   - The UI shows comparing changes to confirm what changes you have done compared to original one
+                   - Click on Create Pull request and in messages section state the changes that were done/updated
+                   - Review the changes and then click again on create pull request
+                   - This pull request will go to master repo creator for approval, they will review again going to Files received section
+                   - Under review changes they can put comments and approve/reject it
+                   - Now after approval, they can merge pull request.
+                   - The changes would be visible in master repo as well
+
+Thanks and Happy Learning.
+Hope you enjoyed it, please feel free to fork the repo and modify in case anything is missed
